@@ -93,7 +93,7 @@ A puppet run would take place on the old master and prep things using the steps 
 
 This is the manifest I used to migrate our linux machines. Available on GitHub here [https://github.com/dschaaff/puppet-migrate](https://github.com/dschaaff/puppet-migrate).
 
-[code language="ruby"]
+```ruby
 class migrate {
 
 file {'/etc/puppetlabs':
@@ -173,7 +173,7 @@ force => true,
 
 I used a similar manifest for macOS
 
-[code language="ruby"]
+```ruby
 class migrate::mac {
 $mac_vers = $facts['macosx_productversion_major']
 
@@ -232,7 +232,7 @@ provider => 'gem',
 
 After migrating the agents I only ran into one piece of code that broke due to the upgrade. Somehow I had overlooked the [removal of dynamic scoping in ERB templates](https://docs.puppet.com/puppet/latest/lang_updating_manifests.html#dynamic-scoping-in-erb). This piece of code was not covered by rspec tests, an area for improvement! I relied on this to configure logstash output to elasticsearch. Under Puppet 3 the relevant piece of ERB looked like this
 
-[code language="ruby"]
+```ruby
 output {
 if [type] == "syslog" {
 elasticsearch {
@@ -244,7 +244,7 @@ ssl => true
 
 The value of `es_input_nodes` was pulled from the params class
 
-[code language="ruby"]
+```ruby
 class elk::logstash (
 $syslog_port = $elk::params::syslog_port,
 $elasticsearch_nodes = $elk::params::elasticsearch_nodes,
@@ -256,13 +256,13 @@ $netflow_port = $elk::params::netflow_port
 
 The params class pulls the info from Puppet DB.
 
-[code language="ruby"]
+```ruby
 $es_input_nodes = sort(query_nodes('Class[Elk::elasticsearch] and elasticsearchrole=data or elasticsearchrole=client'))
 ```
 
 The removal of dynamic scoping templates meant the template was putting empty values in the logstash config and breaking the service. To fix the variables needed to be scoped properly in the template and now look like this
 
-[code language="ruby"]
+```ruby
 output {
 if [type] == "syslog" {
 elasticsearch {

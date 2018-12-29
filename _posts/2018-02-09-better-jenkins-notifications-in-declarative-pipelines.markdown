@@ -19,11 +19,11 @@ tags:
 
 I’ve been using declarative pipelines in Jenkins for a while with the Slack [plugin](https://github.com/jenkinsci/slack-plugin) to send build notifications to Slack. The plugin does what it says on the tin but gives you a pretty boring message by default.
 
-![E8F315D1-04A6-4DC4-B0D8-1E1E7ED42D08.png](https://danielschaaff.files.wordpress.com/2018/02/e8f315d1-04a6-4dc4-b0d8-1e1e7ed42d08.png)
+![E8F315D1-04A6-4DC4-B0D8-1E1E7ED42D08.png]({{ site.url }}/assets/img/e8f315d1-04a6-4dc4-b0d8-1e1e7ed42d08.png)
 
 I used the environment variables available in the pipeline to make things a little bit better and link back to the job.
 
-![08A97422-A7E2-4AB5-A65B-68EF7B5AE196.png](https://danielschaaff.files.wordpress.com/2018/02/08a97422-a7e2-4ab5-a65b-68ef7b5ae196.png)
+![08A97422-A7E2-4AB5-A65B-68EF7B5AE196.png]({{ site.url }}/assets/img/08a97422-a7e2-4ab5-a65b-68ef7b5ae196.png)
 
 But I was still always disappointed the notifications didn’t contain more information. Thankfully version 2.3 of the [plugin](https://github.com/jenkinsci/slack-plugin) added support for the attachments portion of the [Slack message API](https://api.slack.com/docs/message-formatting). I was able to leverage the attachments feature to get better message formatting. Meanwhile, I took some inspiration from [this thread](https://stackoverflow.com/questions/39920437/how-to-access-junit-test-counts-in-jenkins-pipeline-project) to incorporate test result summaries.
 
@@ -43,4 +43,4 @@ Here is the code in the pipeline library
 
 The end result is a much more informative message.
 
-![Screen Shot 2018-02-09 at 11.22.37 PM.png](https://danielschaaff.files.wordpress.com/2018/02/screen-shot-2018-02-09-at-11-22-37-pm.png)
+![Screen Shot 2018-02-09 at 11.22.37 PM.png]({{ site.url }}/assets/img/screen-shot-2018-02-09-at-11-22-37-pm.png)

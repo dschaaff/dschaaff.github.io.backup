@@ -23,7 +23,7 @@ I manage several apps that write various pieces of data to the local file system
 
 The solution I came up with was a [custom Datadog check](https://github.com/dschaaff/datadog-checks). The files I am monitoring are written into a bucket named something like `example-logs/data/event-files/year/month/day`. A new path is set up in the s3 bucket for the current day’s date, e.g. `logs/data/example-log/2018/08/15` each day. The Datadog check sends the count of objects in the current date’s directory as a gauge. You can then monitor that objects are created each day as expected and at a normal rate.
 
-![](https://danielschaaff.files.wordpress.com/2018/08/screen-shot-2018-08-28-at-8-41-07-pm.png?w=300)
+![]({{ site.url }}/assets/img/screen-shot-2018-08-28-at-8-41-07-pm.png)
 
 Here is an example config
 

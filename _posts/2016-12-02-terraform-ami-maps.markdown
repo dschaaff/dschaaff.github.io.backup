@@ -17,7 +17,7 @@ tags:
 
 Up until today we had been using a map variable in terraform to choose our ubuntu 14 ami based on region.
 
-[code lang="text"]
+```
 variable "ubuntu_amis" {
     description = "Mapping of Ubuntu 14.04 AMIs."
     default = {
@@ -38,13 +38,13 @@ variable "ubuntu_amis" {
 
 We would then set the ami id like so when creating an ec2 instance.
 
-[code lang="text"]
+```
 ami = "${lookup(var.ubuntu_amis, var.region)}"
 ```
 
 The problem we ran into is that we now use Ubuntu 16 by default and wanted to expand the ami map to contain its ID's as well. I quickly discovered that nested maps like the one below work.
 
-[code lang="text"]
+```
  variable "ubuntu_amis" {
     description = "Mapping of Ubuntu 14.04 AMIs."
     default = {
@@ -67,7 +67,7 @@ The problem we ran into is that we now use Ubuntu 16 by default and wanted to ex
 
 I also tried the solution from this [old github issue](https://github.com/hashicorp/terraform/issues/191) but it is no longer valid since the concat function only accepts lists now. In the end I landed using a variable for os version and setting it like this.
 
-[code lang="text"]
+```
 variable "os-version" {
     description = "Whether to use ubuntu 14 or ubuntu 16"
     default     = "ubuntu16"
@@ -103,7 +103,7 @@ ariable "ubuntu_amis" {
 
 Then using a lookup such as this when creating an instance
 
-[code lang="text"]
+```
 ami = "${lookup(var.ubuntu_amis, "${var.os-version}.${var.region}")}"
 ```
 
