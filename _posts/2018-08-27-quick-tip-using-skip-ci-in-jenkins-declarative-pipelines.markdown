@@ -15,16 +15,17 @@ You’ve spent the past hour meticulously crafting a Readme update and its time 
 
 Add the below when block to each stage you wish to skip in your Jenkinsfile.
 
-```
+```groovy
 when {
     not {
         changelog '\\[skip-ci\\]'
     }
 }
 ```
+
 We can also expand upon this for other actions if desired. For example, use the following around a deploy stage to avoid deploying pull requests, anything not on the master branch, and to respect the `[skip-ci]` param in a commit message.
 
-```
+```groovy
 stage('Deploy'){
     when {
         allOf {

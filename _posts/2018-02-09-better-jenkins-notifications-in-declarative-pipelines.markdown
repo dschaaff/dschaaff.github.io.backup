@@ -29,20 +29,18 @@ But I was still always disappointed the notifications didn’t contain more info
 
 I store this in a shared pipeline library to avoid repeating the code in every Jenkinsfile. This way you can simply call it in a post step like this.
 
-```
+```groovy
 post {
-always {
-notifySlack currentBuild.result
-}
+  always {
+    notifySlack currentBuild.result
+  }
 }
 ```
 
 Here is the code in the pipeline library
 
-https://gist.github.com/dschaaff/bd3275c1395a48cef1a82708d3a55f5d
+<script src="https://gist.github.com/dschaaff/bd3275c1395a48cef1a82708d3a55f5d.js"></script>
 
 The end result is a much more informative message.
 
 ![Screen Shot 2018-02-09 at 11.22.37 PM.png](https://danielschaaff.files.wordpress.com/2018/02/screen-shot-2018-02-09-at-11-22-37-pm.png)
-
-

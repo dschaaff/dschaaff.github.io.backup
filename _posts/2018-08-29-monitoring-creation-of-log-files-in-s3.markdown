@@ -46,35 +46,19 @@ instances:
 
 The check will add the current date path to the prefix automatically.
 
-
-
 ## How to Set it Up for Yourself
 
-
-
-
-
-
-
-  * Install boto3 via the Datadog embedded pip
-
-
+- Install boto3 via the Datadog embedded pip
 
 ```bash
 /opt/datadog-agent/embedded/bin/pip install boto3
 ```
 
-
-
-  * add s3_object_count.py to /etc/datadog-agent/checks.d
-
-
-  * add your config file to /etc/datadog-agent/conf.d/s3_object_count.d
-
-
+- add s3_object_count.py to /etc/datadog-agent/checks.d
+- add your config file to /etc/datadog-agent/conf.d/s3_object_count.d
 
 The code for the check is pretty simple.
 
-https://gist.github.com/dschaaff/c8328f1c6846eaa18980ed988b062d71
+<script src="https://gist.github.com/dschaaff/c8328f1c6846eaa18980ed988b062d71.js"></script>
 
 See [https://github.com/dschaaff/datadog-checks](https://github.com/dschaaff/datadog-checks) for the full source.
