@@ -1,0 +1,16 @@
+---
+author: dschaaff
+comments: true
+date: 2014-03-24 00:15:42+00:00
+layout: post
+link: http://danielschaaff.com/2014/03/24/technology-20/
+slug: technology-20
+title: No Content Found
+wordpress_id: 99
+post_format:
+- Image
+---
+
+![](https://danielschaaff.files.wordpress.com/2014/03/tumblr_n2wze7shlq1qcnv82o1_1280.jpg)
+
+Technology 2.0

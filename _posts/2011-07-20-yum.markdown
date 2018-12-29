@@ -1,0 +1,16 @@
+---
+author: dschaaff
+comments: true
+date: 2011-07-20 14:35:16+00:00
+layout: post
+link: http://danielschaaff.com/2011/07/20/yum/
+slug: yum
+title: Yum
+wordpress_id: 479
+---
+
+[![Image](http://posterous.com/getfile/files.posterous.com/danielschaaff/yrlcyigGkAIaxIgeJjvyIflstDDjcJmmGglCxGpJhztyqDsrBqkjzfaEinGl/image.jpg.scaled500.jpg)](http://posterous.com/getfile/files.posterous.com/danielschaaff/yrlcyigGkAIaxIgeJjvyIflstDDjcJmmGglCxGpJhztyqDsrBqkjzfaEinGl/image.jpg.scaled1000.jpg)
+
+  
+
+via [Tweetbot for iPhone](http://tapbots.com/tweetbot)
