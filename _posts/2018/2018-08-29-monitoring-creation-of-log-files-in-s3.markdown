@@ -3,7 +3,7 @@ author: dschaaff
 comments: true
 date: 2018-08-29 03:45:14+00:00
 layout: post
-link: http://danielschaaff.com/2018/08/28/monitoring-creation-of-log-files-in-s3/
+link: http://danielschaaff.com/monitoring-creation-of-log-files-in-s3/
 slug: monitoring-creation-of-log-files-in-s3
 title: Monitoring Creation of Log Files in s3
 wordpress_id: 882

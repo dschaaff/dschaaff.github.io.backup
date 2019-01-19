@@ -16,11 +16,11 @@ paginate:            5
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
-permalink:           none
+permalink:           /:year/:month/:day/:title.html
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'Daniel Schaaff'
+title:               'Daniel Schaaff'
 # description:	       'A nerdy father, musician, and technology lover looking to make my mark on the world.'
 author:              'Daniel Schaaff'
 
