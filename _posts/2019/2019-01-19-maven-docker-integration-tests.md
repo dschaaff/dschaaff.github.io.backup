@@ -16,7 +16,7 @@ tags:
 - devops
 ---
 
-Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Severl years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.
+Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.
 
 I'm currently taking advantage of this plugin to accomplish two things.
 
